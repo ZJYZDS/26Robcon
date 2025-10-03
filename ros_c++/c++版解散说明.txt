@@ -1,0 +1,18 @@
+p_node.cpp -->创建topic,发送message (2023113135_张家源)
+S_node.cpp -->加入topic(由P_node.cpp创建)，接收message
+
+实现方法：
+1.
+ctrl + alt +t 进入终端
+roscore
+rosrun zjyp_pkg P_node.cpp
+分屏终端 rosrun zjys_pkg S_node.cpp
+
+2.
+使用launch文件
+<launch>
+  <node pkg="zjyp_pkg" type="P_node" name="P_node"/>
+  <node pkg="zjys_pkg" type="S_node" name="S_node" output="screen"/>
+</launch>
+
+
