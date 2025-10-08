@@ -1,0 +1,8 @@
+使用open3d完成python-pcl等效任务
+1. rosbag.Bag("",'r')-->以只读格式打开bag文件
+2. 提取帧点云数据(只提取三维坐标矩阵)，并利用open3d将其转化为pcl点云
+
+
+3.由于python-pcl导入问题我无法解决，借鉴pcl-passthrough（直通滤波思想）
+利用mask掩码提取(坐标位于x(0~5),  y(5~7),  z(0.3~2))的points---->aim_points
+再将aim_points -->aim_cloud -->output
